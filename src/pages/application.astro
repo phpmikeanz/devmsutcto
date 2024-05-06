@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/Navbar";
+import MainVideo from "../components/MainVideo.astro";
+import FooterNav from "../components/FooterNav.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/css/global.css';
+
+const currentPath = Astro.url.pathname;
+---
+
+<Layout title="MSU | Tawi-Tawi College of Technology and Oceanography">
+	<main>
+<!-- fold 01 - Header -->
+		<Navbar path={currentPath} client:visible />
+<!-- end fold 01 -->
+
+<!-- fold 02 -->
+		<div class="bg-msu-ocean xl:px-[12.5%] xl:pt-[80px] xs:pt-[40px]  xl:pb-[68px] xs:pb-[48px]">
+            <div class="flex flex-col gap-10">
+                <h4 class="headings text-white-pure xl:h4 xs:h5">Supervising Administrative Officer</h4>
+                <div class="flex justify-between">
+                    <div class="ml-5">
+                        <p class="paragraph text-white-pure xl:p1 xs:p2 mb-5">Qualification Standards</p>
+                        <ul class="ml-5">
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">Bachelor's Degree relevant to the job</p></li>
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">16 hours of relevant training</p></li>
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">3 years of relevant experience</p></li>
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">Career Service (Professional) Second Level Eligibility or its equivalent</p></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">Salary Grade: 22</p></li>
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">Monthly Salary: 71,511</p></li>
+                            <li><p class="paragraph text-white-pure xl:p1 xs:p2">Place of Assignment: MSU-TCTO</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+		</div>
+<!-- end fold 02 -->
+
+<!-- Footer -->
+		<Footer />
+<!-- end Footer -->
+
+	</main>
+	
+</Layout>
+ 

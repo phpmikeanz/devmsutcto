@@ -1,0 +1,25 @@
+---
+export interface Props {
+	title: string;
+    header: string
+    image: string;
+}
+
+const { title, header, image } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/images/MSU Seal New (Official).png" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content={header} />
+		<meta property="og:image" content={image} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
